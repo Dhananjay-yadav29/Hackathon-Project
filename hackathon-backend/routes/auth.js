@@ -18,6 +18,7 @@ router.post('/newuser', [
         return res.status(400).json({ errors: errors.array() });
     }
 
+    
     try {
 
         let user = await User.findOne({ email: req.body.email });
